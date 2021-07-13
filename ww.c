@@ -24,11 +24,16 @@ const struct argument backlight[] = {
 
 const char* usage = "My name is Wentworth but you can call me W.\n\n"
     "GENERAL\n"
-    "wwctl   , --version\n"
-    "      -v, --verbose\n"
+    "wwctl   , --version        : display version\n";
+    "      -v, --verbose        : print all messages\n"
     "\n"
     "BACKLIGHT\n"
-    "wwctl bl -b <brightness>   : percent (%), adjustment (+/-), percise (of 255)\n";
+    "wwctl bl -b <brightness>   : percent (%), adjustment (+/-), percise (of 255)\n"
+    "\n"
+    "CONFIG FILES\n"
+    "wwctl cf --alacritty       : check if symlinked, if not, symlink\n"
+    "         --sway            : check if symlinked, if not, symlink\n"
+    "         --vim             : check if symlinked, if not, symlink\n";
 
 int is_short_flag(char* term) {
     const size_t l = strlen(term);
